@@ -1,7 +1,7 @@
 var GCM = require('gcm').GCM;
 var sys = require('sys');
 
-var apiKey = 'AIzaSyDIx41hFSA1Cd_M78HvBA8jmFKo5uSMFuE';
+var apiKey = 'AIzaSyCw84iHBkAh1p3wuc8nSncNdXxAmAl4saE';
 var gcm = new GCM(apiKey);
 
 var stdin = process.openStdin();
@@ -13,10 +13,10 @@ stdin.addListener("data", function(d) {
     //console.log("you entered: [" + msg + "]");
 
     var message = {
-        registration_id: 'APA91bG1hv1n7WXJGOT-veJ4_d-1w33F3gIDxmbdLwrOKe4MUIF-mdpABjN7Y7iqAUl4kea_MnKx098LaZiUW0R1Yg0GgtOj4vuylp9Qb4xVN4j51G7SdENxZZbmDcFNqxYCoFKVzbuPtELeAXE7NNw2D9Dpw8ZFQsjsKjABlZExUeSko5192N0', // required
+        registration_id: ['APA91bEyYOagW7pmdBW45AXaqj42LWkV9NlX4cMqWnDsSH4hWjM8uic0SsCFpPvMC-ZuKIBdlS0dT3hze6fYGCX2li9vJTU20odLhN83FB85Wyax-WRAH78FQu0GjJOs3s1O0Q2KT-d1RrdGqnZxKDlkGM4zxvqf6w'], // required
         //collapse_key: 'Collapse key',
-        'time_to_live': '3',
-        'data': msg
+        time_to_live: '3',
+        data: "{'key1':'MomentInvitation'}"
     };
 
     gcm.send(message, function(err, messageId){
