@@ -1,7 +1,7 @@
 var GCM = require('gcm').GCM;
 var sys = require('sys');
 
-var apiKey = 'AIzaSyCw84iHBkAh1p3wuc8nSncNdXxAmAl4saE';
+var apiKey = '';
 var gcm = new GCM(apiKey);
 
 var stdin = process.openStdin();
@@ -13,7 +13,7 @@ stdin.addListener("data", function(d) {
     //console.log("you entered: [" + msg + "]");
 
     var message = {
-        registration_id: ['APA91bEyYOagW7pmdBW45AXaqj42LWkV9NlX4cMqWnDsSH4hWjM8uic0SsCFpPvMC-ZuKIBdlS0dT3hze6fYGCX2li9vJTU20odLhN83FB85Wyax-WRAH78FQu0GjJOs3s1O0Q2KT-d1RrdGqnZxKDlkGM4zxvqf6w'], // required
+        registration_id: [''], // required
         //collapse_key: 'Collapse key',
         time_to_live: '3',
         data: "{'key1':'MomentInvitation'}"
